@@ -7,12 +7,14 @@
 
 :root{
     --main-color: #3C82C4;
-    --bg-color-right-blue:#EAFBFC;
+    --bg-color-light-blue:#EAFBFC;
+    --bg-color-pale-blue:#90d0f1;
     --text-color-main:#545454;
     --text-color-white:#FFFFFF;
     --text-color-pink:#FF7F7F;
     --text-color-yellow:#F7FBBF;
     --text-color-green:#06C775;
+    --text-color-blue:#4FA3E3;
 }
 
 /* *{
@@ -61,14 +63,6 @@ li{
     position: relative;
     padding: 0 3rem 6rem;
     background: url(../img/bg/cloudy_blue.png) no-repeat center top;
-    -webkit-mask-image: url('data:image/svg+xml;utf8,<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 120" preserveAspectRatio="none"><path d="M0,0 L0,115 Q300,120 600,115 T1200,115 L1200,0 Z" fill="black"/></svg>');
-    mask-image: url('data:image/svg+xml;utf8,<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 120" preserveAspectRatio="none"><path d="M0,0 L0,115 Q300,120 600,115 T1200,115 L1200,0 Z" fill="black"/></svg>');
-    -webkit-mask-size: 100% calc(100% + 6rem);
-    mask-size: 100% calc(100% + 6rem);
-    -webkit-mask-position: bottom;
-    mask-position: bottom;
-    -webkit-mask-repeat: no-repeat;
-    mask-repeat: no-repeat;
 }
 
 .intro__img-wrap {
@@ -176,8 +170,19 @@ li{
 }
 
 .bg_confetti {
-    margin-top: -6.5rem;
+    margin-top: -5.5rem;
     background: url(../img/bg/bg_confetti.png) no-repeat center / cover;
+}
+
+.intro__cta {
+    -webkit-mask-image: url('data:image/svg+xml;utf8,<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 120" preserveAspectRatio="none"><path d="M0,5 Q300,10 600,5 T1200,5 L1200,110 L0,110 Z" fill="black"/></svg>');
+    mask-image: url('data:image/svg+xml;utf8,<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 120" preserveAspectRatio="none"><path d="M0,10 Q300,30 600,10 T1200,10 L1200,110 L0,110 Z" fill="black"/></svg>');
+    -webkit-mask-size: 100% calc(100% + 6rem);
+    mask-size: 100% calc(100% + 6rem);
+    -webkit-mask-position: top;
+    mask-position: top;
+    -webkit-mask-repeat: no-repeat;
+    mask-repeat: no-repeat;
 }
 
 /* achievementsセクション */
@@ -226,7 +231,7 @@ li{
     top: -7.5rem;
     left: -22%;
     width: 10rem;
-    height: 6.1rem;
+    height: 6.5rem;
     background: url(../img/deco/ahead.png) no-repeat top / 100%;
 }
 
@@ -238,6 +243,21 @@ li{
     width: 9rem;
     height: 7.7rem;
     background: url(../img/deco/accent-blue.png) no-repeat center / contain;
+}
+
+.achievements-title span {
+    position: relative;
+    display: block;
+}
+
+.achievements-title span::before {
+    content: "";
+    position: absolute;
+    bottom: -5.1rem;
+    left: 50%;
+    width: 1.2rem;
+    height: 4.1rem;
+    background: url(../img/deco/arrow-to-under.png) no-repeat center / cover;
 }
 
 .achievements__slick-slider {
@@ -254,7 +274,7 @@ li{
 .achievements__img {
     margin-bottom: 1rem;
     border-radius: 1rem;
-    background: var(--bg-color-right-blue);
+    background: var(--bg-color-light-blue);
 }
 
 .achievements__img img {
@@ -406,6 +426,7 @@ li{
 }
 
 .trouble__item-text {
+    flex-grow: 1;
     padding: 0.3rem 0rem 1rem 1.2rem;
     border-bottom: 1px dotted var(--text-color-white);
 }
@@ -478,7 +499,7 @@ li{
 /* reasonセクション */
 .reason {
     padding: 3rem 1.5rem 0;
-    background: var(--bg-color-right-blue);
+    background: var(--bg-color-light-blue);
 }
 
 .reason__title {
@@ -580,7 +601,7 @@ li{
     font-size: 1.6rem;
     line-height: 1.5;
     font-weight: 700;
-    background: var(--bg-color-right-blue);
+    background: var(--bg-color-light-blue);
     -webkit-mask-image: url('data:image/svg+xml;utf8,<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 100 100" preserveAspectRatio="none"><path fill="black" d="M0,0 H100 V30 Q75,110 50,100 Q25,110 0,30 Z"/></svg>');
     mask-image:        url('data:image/svg+xml;utf8,<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 100 100" preserveAspectRatio="none"><path fill="black" d="M0,0 H100 V30 Q75,110 50,100 Q25,110 0,30 Z"/></svg>');
     -webkit-mask-size: 100% 100%;
@@ -605,7 +626,7 @@ li{
 
 .reason__conclusion-intro span {
     padding: 0 0.2em;
-    background: linear-gradient(transparent 60%, var(--main-color) 60%);
+    background: linear-gradient(transparent 60%, var(--bg-color-pale-blue) 60%);
 }
 
 .reason__conclusion-text {
@@ -632,7 +653,9 @@ li{
     font-family: 'HitoriGothic', 'Zen Kaku Gothic New', 'ヒラギノ角ゴ Pro W3', 'Hiragino Kaku Gothic Pro', 'メイリオ', Meiryo, 'ＭＳ Ｐゴシック', 'MS PGothic', sans-serif;
     font-size: 4rem;
     line-height: 1;
+    font-weight: 400;
     color: var(--text-color-pink);
+    background: rgba(255, 255, 255, 0.65);
 }
 
 
@@ -885,6 +908,7 @@ li{
 
 .textbook__cta-btn {
     margin: 2.5rem 4.7rem 0;
+    padding: 1rem;
 }
 
 /* volumeセクション */
@@ -918,9 +942,13 @@ li{
     font-size: 1.6rem;
     line-height: 1.5;
     letter-spacing: 0.03em;
+    font-weight: 700;
     color: var(--text-color-white);
 }
 
+.volume__text span {
+    color: var(--text-color-yellow);
+}
 /* counselingセクション */
 .counseling {
     padding: 1.7rem 0 0;
@@ -970,7 +998,7 @@ li{
 .counseling__merit-wrap {
     position: relative;
     margin-bottom: 3rem;
-    padding: 1.8rem 0.9rem;
+    padding: 1.8rem 0.9rem 0;
     border-radius: 2rem;
     background: var(--text-color-white);
 }
@@ -984,14 +1012,13 @@ li{
     width: 97%;
     height: 43%;
     border-radius: 2rem;
-    background: var(--bg-color-right-blue);
+    background: var(--bg-color-light-blue);
     z-index: 0;
 }
 
 .counseling__merit-intro {
     position: relative;
     margin: 0 4.3rem 1.5rem;
-    border-bottom: 1px dotted var(--main-color);
     font-size: 1.4rem;
     line-height: 1.5;
     font-weight: 700;
@@ -1015,6 +1042,10 @@ li{
     width: 3rem;
     height: 4rem;
     background: url(../img/deco/dash-right.png) no-repeat top / contain;
+}
+
+.counseling__merit-intro-text {
+    border-bottom: 2px dotted var(--main-color);
 }
 
 .counseling__merit-intro span {
@@ -1125,31 +1156,14 @@ li{
 .why::before {
     content: "";
     position: absolute;
-    top: 4rem;
-    left: 50%;
-    transform: translateX(-50%);
+    top: 0;
+    left: 0;
+    width: 0;
+    height: 0;
+    border: solid transparent;
+    border-width: 3rem 3rem 0 0;
+    border-top-color: #fff;
     z-index: 1;
-    width: 1px;
-    height: 1rem;
-    background: #545454;
-}
-
-.why::after {
-    content: "なぜ";
-    position: absolute;
-    top: -4rem;
-    left: 50%;
-    transform: translateX(-50%);
-    z-index: 1;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    width: 8rem;
-    height: 8rem;
-    border-radius: 50%;
-    border: 1px solid #545454;
-    font-size: 2.4rem;
-    background: var(--text-color-yellow);
 }
 
 .why__title {
@@ -1172,6 +1186,37 @@ li{
     width: 100%;
     height: 3.4rem;
     background: url(../img/deco/line_wave.png) no-repeat center / contain;
+}
+
+.why__title span {
+    content: "";
+    position: absolute;
+    top: -10rem;
+    left: 50%;
+    transform: translateX(-50%);
+    z-index: 1;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 8rem;
+    height: 8rem;
+    border-radius: 50%;
+    border: 1px solid #545454;
+    font-size: 2.4rem;
+    color: var(--text-color-main);
+    background: var(--text-color-yellow);
+}
+
+.why__title span::before {
+    content: "";
+    position: absolute;
+    top: 8rem;
+    left: 50%;
+    transform: translateX(-50%);
+    z-index: 1;
+    width: 1px;
+    height: 1rem;
+    background: #545454;
 }
 
 .why__top-img {
@@ -1204,6 +1249,19 @@ li{
 .why__img-bottom-wrap {
     position: relative;
     height: 26rem;
+}
+
+.why__img-bottom-wrap::after {
+    content: "";
+    position: absolute;
+    right: 0;
+    bottom: 0;
+    width: 0;
+    height: 0;
+    border: solid transparent;
+    border-width: 0 0 3rem 3rem;
+    border-bottom-color: #fff;
+    z-index: 1;
 }
 
 .why__img-bottom {
@@ -1284,7 +1342,7 @@ li{
     line-height: 1.5;
     font-weight: 700;
     letter-spacing: 0.02em;
-    color: var(--main-color);
+    color: var(--text-color-blue);
     background: url(../img/bg/bg_window.png) no-repeat center / cover;
 }
 
@@ -1312,7 +1370,7 @@ li{
 .review__title span:nth-child(odd) {
     font-size: 2rem;
     color: var(--text-color-yellow);
-    background: var(--main-color);
+    background: var(--text-color-blue);
 }
 
 .review__title span:nth-child(even) {
@@ -1376,7 +1434,7 @@ li{
     line-height: 1;
     letter-spacing: 0.05em;
     font-weight: 700;
-    color: var(--main-color);
+    color: var(--text-color-blue);
 }
 
 
@@ -1398,7 +1456,7 @@ li{
     justify-content: center;
     align-items: center;
     width: 96%;
-    margin: 0 auto;
+    margin: 0 auto 3rem;
     padding: 2.2rem 3.5rem 3.7rem 4.3rem;
     background: url(../img/bg/bg_color-circle.png) no-repeat center / contain;
 }
@@ -1433,7 +1491,7 @@ li{
     height: 2rem;
     border-radius: 50%;
     text-align: center;
-    line-height: 2rem;
+    line-height: 1.7rem;
     color: var(--text-color-white);
     background: var(--main-color);
 }
@@ -1459,7 +1517,7 @@ li{
 }
 
 .step__item-title span {
-    color: var(--main-color);
+    color: var(--text-color-blue);
     font-weight: 700;
 }
 
@@ -1483,7 +1541,7 @@ li{
 }
 
 .step__cta {
-    padding: 5.5rem 4.8rem 3.2rem;
+    padding: 2.5rem 4.8rem 3.2rem;
     background: #fff;
 }
 
@@ -1614,7 +1672,9 @@ li{
     border: 1px solid var(--main-color);
     border-top-left-radius: 3rem;
     border-bottom-right-radius: 3rem;
+    background: var(--text-color-white);
     box-shadow: 1px 4px 4px rgba(0, 0, 0, 0.3);
+    cursor: pointer;
 }
 
 .faq__item-question {
@@ -1633,6 +1693,11 @@ li{
     font-family: "Caveat", 'Zen Kaku Gothic New', 'ヒラギノ角ゴ Pro W3', 'Hiragino Kaku Gothic Pro', 'メイリオ', Meiryo, 'ＭＳ Ｐゴシック', 'MS PGothic', sans-serif;
     font-size: 2.8rem;
     color: var(--main-color);
+}
+
+.faq__item-question--text {
+    flex-grow: 1;
+    padding-right: 1rem;
 }
 
 .faq__item-answer {
@@ -1655,16 +1720,37 @@ li{
 }
 
 .faq__item-question--icon {
+    position: relative;
     margin: -0.5rem;
     padding: 0.5rem;
     font-size: 2rem;
     color: var(--main-color);
     cursor: pointer;
-    transition: transform 0.3s ease;
 }
 
-.faq__item.is-open .faq__item-question--icon {
-    transform: rotate(180deg);
+.faq__item-question--icon::before,
+.faq__item-question--icon::after {
+    content: "";
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    width: 1.2rem;
+    height: 2px;
+    background: var(--main-color);
+    transition: transform 0.3s ease, opacity 0.3s ease;
+}
+
+.faq__item-question--icon::before {
+    transform: translate(-50%, -50%);
+}
+
+.faq__item-question--icon::after {
+    transform: translate(-50%, -50%) rotate(90deg);
+}
+
+.faq__item.is-open .faq__item-question--icon::after {
+    transform: translate(-50%, -50%) rotate(0deg);
+    opacity: 0;
 }
 
 
@@ -1678,6 +1764,8 @@ li{
     padding: 3.4rem 1.5rem;
     text-align: center;
     background: rgba(255, 255, 255, 0.7);
+    backdrop-filter: blur(3px);
+    -webkit-backdrop-filter: blur(3px);
 }
 
 .closing__title {

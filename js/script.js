@@ -12,13 +12,11 @@ $(document).ready(function(){
 
 // FAQアコーディオン機能
 document.addEventListener('DOMContentLoaded', function() {
-    const faqIcons = document.querySelectorAll('.faq__item-question--icon');
+    const faqItems = document.querySelectorAll('.faq__item');
     
-    faqIcons.forEach(function(icon) {
-        icon.addEventListener('click', function() {
-            const faqItem = this.closest('.faq__item');
-            
-            faqItem.classList.toggle('is-open');
+    faqItems.forEach(function(item) {
+        item.addEventListener('click', function() {
+            this.classList.toggle('is-open');
         });
     });
 });
