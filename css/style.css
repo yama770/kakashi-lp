@@ -998,7 +998,7 @@ li{
 .counseling__merit-wrap {
     position: relative;
     margin-bottom: 3rem;
-    padding: 1.8rem 0.9rem 0;
+    padding: 1.8rem 0.5rem 0;
     border-radius: 2rem;
     background: var(--text-color-white);
 }
@@ -1018,7 +1018,7 @@ li{
 
 .counseling__merit-intro {
     position: relative;
-    margin: 0 4.3rem 1.5rem;
+    margin: 0 4.3rem 1rem;
     font-size: 1.4rem;
     line-height: 1.5;
     font-weight: 700;
@@ -1062,59 +1062,6 @@ li{
     position: relative;
     z-index: 1;
     padding-bottom: 1.2rem;
-    border: 1px solid var(--text-color-main);
-    border-bottom-left-radius: 2rem;
-    border-bottom-right-radius: 2rem;
-}
-
-.counseling__merit-title {
-    position: relative;
-    margin-bottom: 1.5rem;
-    padding: 1.3rem 0 1.2rem;
-    border: 1px solid var(--text-color-main);
-    font-size: 2.4rem;
-    line-height: 1.3;
-    letter-spacing: 0.05em;
-    font-weight: 700;
-    color: var(--text-color-white);
-}
-
-.counseling__merit-title::before {
-    content: "";
-    position: absolute;
-    top: -.6rem;
-    left: 50%;
-    transform: translateX(-50%);
-    z-index: -1;
-    width: calc(100% + 2rem);
-    height: 10.5rem;
-    background: url(../img/deco/flame_blue-squ.png) no-repeat center / contain;
-}
-
-.counseling__merit-item {
-    position: relative;
-    margin: 0 2rem;
-    padding: 0.5rem 0 0.5rem 3rem;
-    border-bottom: dotted 1px var(--main-color);
-    text-align: left;
-    font-size: 1.4rem;
-    line-height: 1.5;
-    font-weight: 700;
-}
-
-.counseling__merit-item:last-child {
-    border-bottom: none;
-}
-
-.counseling__merit-item::before {
-    content: "";
-    position: absolute;
-    top: 50%;
-    transform: translateY(-50%);
-    left: 0;
-    width: 2rem;
-    height: 2rem;
-    background: url(../img/deco/icon_check-box.png) no-repeat center / contain;
 }
 
 .counseling__merit-conclusion {
