@@ -305,6 +305,7 @@ li{
 .achievements__detail {
     font-size: 1.4rem;
     line-height: 1.5;
+    font-weight: 700;
 }
 
 .achievements__detail span {
@@ -831,7 +832,7 @@ li{
     display: block;
     margin: 2rem auto 0;
     width: 100%;
-    height: 2rem;
+    height: 3rem;
     background: url(../img/deco/balloon-line.png) no-repeat center / cover;
 }
 
@@ -856,7 +857,7 @@ li{
 .textbook__cta-wrap {
     margin: 0 -1.7rem;
     padding: 2.5rem 0 4.7rem;
-    background: url(../img/bg/bg_gradation-yellow.png);
+    background: url(../img/bg/bg_gradation-yellow.png) no-repeat center top / cover;
 }
 
 .textbook__cta-text {
