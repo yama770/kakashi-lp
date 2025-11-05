@@ -9,12 +9,16 @@
     --main-color: #3C82C4;
     --bg-color-light-blue:#EAFBFC;
     --bg-color-pale-blue:#90d0f1;
+    --bg-color-white:#FFFFFF;
+    --bg-color-yellow:#F7FBBF;
+    --bg-color-black:#545454;
     --text-color-main:#545454;
     --text-color-white:#FFFFFF;
     --text-color-pink:#FF7F7F;
     --text-color-yellow:#F7FBBF;
     --text-color-green:#06C775;
     --text-color-blue:#4FA3E3;
+    --text-color-red:#F24D50;
 }
 
 /* *{
@@ -188,7 +192,7 @@ li{
 /* achievementsセクション */
 .achievements {
     position: relative;
-    padding: 6rem 3.7rem 3rem;
+    padding: 6.5rem 3.7rem 3rem;
     text-align: center;
 }
 
@@ -231,7 +235,7 @@ li{
     top: -7.5rem;
     left: -22%;
     width: 10rem;
-    height: 6.5rem;
+    height: 8rem;
     background: url(../img/deco/ahead.png) no-repeat top / 100%;
 }
 
@@ -263,7 +267,7 @@ li{
 .achievements__slick-slider {
     position: relative;
     margin-bottom: 3rem;
-    background: #fff;
+    background: var(--bg-color-white);
     border-radius: 1rem;
 }
 
@@ -307,7 +311,7 @@ li{
     padding: 0 0.2em;
     color: var(--main-color);
     font-weight: bold;
-    background: linear-gradient(transparent 60%, #F7FBBF 60%);
+    background: linear-gradient(transparent 60%, var(--bg-color-yellow) 60%);
 }
 
 .achievements__success-img {
@@ -446,7 +450,7 @@ li{
 }
 
 .trouble__text span {
-    background: linear-gradient(transparent 60%, #F7FBBF 60%);
+    background: linear-gradient(transparent 60%, var(--bg-color-yellow) 60%);
 }
 
 .trouble__conclusion {
@@ -515,7 +519,7 @@ li{
 
 .reason__title span {
     padding: .1em;
-    background: linear-gradient(transparent 0%, #F7FBBF 0%);
+    background: linear-gradient(transparent 0%, var(--bg-color-yellow) 0%);
 }
 
 .reason__title::after {
@@ -568,7 +572,7 @@ li{
     border-top-right-radius: 3rem;
     border-bottom-right-radius: 3rem;
     overflow: hidden;
-    background: #fff;
+    background: var(--bg-color-white);
     box-shadow: 0 0.8rem 0.5rem -0.5rem rgba(0, 0, 0, 0.2);
 }
 
@@ -590,11 +594,24 @@ li{
 }
 
 .reason__conclusion {
-    margin: 0 -1.5rem;
-    background-color: #fff;
-}
-.reason__conclusion-intro {
     position: relative;
+    margin: 0 -1.5rem;
+    background: var(--bg-color-white);
+}
+
+.reason__conclusion::after {
+    content: "";
+    position: absolute;
+    top: 9.5rem;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 1.6rem;
+    height: 5.5rem;
+    background: url(../img/deco/dot.png) no-repeat top / contain;
+    z-index: 1;
+}
+
+.reason__conclusion-intro {
     margin-bottom: 2rem;
     padding: 1rem 4rem 5.5rem;
     text-align: center;
@@ -603,25 +620,13 @@ li{
     font-weight: 700;
     background: var(--bg-color-light-blue);
     -webkit-mask-image: url('data:image/svg+xml;utf8,<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 100 100" preserveAspectRatio="none"><path fill="black" d="M0,0 H100 V30 Q75,110 50,100 Q25,110 0,30 Z"/></svg>');
-    mask-image:        url('data:image/svg+xml;utf8,<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 100 100" preserveAspectRatio="none"><path fill="black" d="M0,0 H100 V30 Q75,110 50,100 Q25,110 0,30 Z"/></svg>');
+    mask-image:        url('data:image/svg+xml;utf8,<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 100 100" preserveAspectRatio="none"><path fill="black" d="M0,0 H100 V30 Q75,105 50,100 Q25,105 0,30 Z"/></svg>');
     -webkit-mask-size: 100% 100%;
     mask-size: 100% 100%;
     -webkit-mask-position: bottom center;
     mask-position: bottom center;
     -webkit-mask-repeat: no-repeat;
     mask-repeat: no-repeat;
-}
-
-.reason__conclusion-intro::after {
-    content: "";
-    position: absolute;
-    bottom: 1rem;
-    left: 50%;
-    transform: translateX(-50%);
-    width: 1.6rem;
-    height: 3rem;
-    background: url(../img/deco/dot.png) no-repeat top / contain;
-    z-index: 1;
 }
 
 .reason__conclusion-intro span {
@@ -648,7 +653,7 @@ li{
 
 .reason__conclusion-text span {
     display: block;
-    padding: 0 0.2em;
+    padding: 1.5rem 0.2em;
     margin: 1.5rem 0 2rem;
     font-family: 'HitoriGothic', 'Zen Kaku Gothic New', 'ヒラギノ角ゴ Pro W3', 'Hiragino Kaku Gothic Pro', 'メイリオ', Meiryo, 'ＭＳ Ｐゴシック', 'MS PGothic', sans-serif;
     font-size: 4rem;
@@ -668,7 +673,7 @@ li{
 .textbook__wrap {
     margin-bottom: 4.5rem;
     padding: 3rem 0 0;
-    background: #fff;
+    background: var(--bg-color-white);
 }
 
 .textbook__title {
@@ -802,7 +807,7 @@ li{
 .textbook__conclusion {
     margin: 0 -1.7rem;
     padding-top: 4rem;
-    background: #fff;
+    background: var(--bg-color-white);
     -webkit-mask-image: url('data:image/svg+xml;utf8,<svg xmlns="http://www.w3.org/2000/svg" preserveAspectRatio="none" viewBox="0 0 100 100"><path fill="black" fill-rule="evenodd" d="M0,0 H100 V100 H0 Z M0,0 L100,0 L50,12 Z"/></svg>');
     mask-image:            url('data:image/svg+xml;utf8,<svg xmlns="http://www.w3.org/2000/svg" preserveAspectRatio="none" viewBox="0 0 100 100"><path fill="black" fill-rule="evenodd" d="M0,0 H100 V100 H0 Z M0,0 L100,0 L50,12 Z"/></svg>');
     -webkit-mask-size: 100% 100%;
@@ -1109,7 +1114,7 @@ li{
     height: 0;
     border: solid transparent;
     border-width: 3rem 3rem 0 0;
-    border-top-color: #fff;
+    border-top-color: var(--bg-color-white);
     z-index: 1;
 }
 
@@ -1148,7 +1153,7 @@ li{
     width: 8rem;
     height: 8rem;
     border-radius: 50%;
-    border: 1px solid #545454;
+    border: 1px solid var(--bg-color-black)545454;
     font-size: 2.4rem;
     color: var(--text-color-main);
     background: var(--text-color-yellow);
@@ -1163,7 +1168,7 @@ li{
     z-index: 1;
     width: 1px;
     height: 1rem;
-    background: #545454;
+    background: var(--bg-color-black)545454;
 }
 
 .why__top-img {
@@ -1207,7 +1212,7 @@ li{
     height: 0;
     border: solid transparent;
     border-width: 0 0 3rem 3rem;
-    border-bottom-color: #fff;
+    border-bottom-color: var(--bg-color-white);
     z-index: 1;
 }
 
@@ -1440,7 +1445,7 @@ li{
     text-align: center;
     line-height: 1.7rem;
     color: var(--text-color-white);
-    background: var(--main-color);
+    background: var(--text-color-blue);
 }
 
 .step__item:nth-child(1) .step__item-title:before {
@@ -1489,7 +1494,7 @@ li{
 
 .step__cta {
     padding: 2.5rem 4.8rem 3.2rem;
-    background: #fff;
+    background: var(--bg-color-white);
 }
 
 
@@ -1658,6 +1663,10 @@ li{
     font-weight: 700;
     color: var(--main-color);
     transition: max-height 0.3s ease, opacity 0.3s ease, margin-top 0.3s ease;
+}
+
+.faq__item-answer span {
+    color: var(--text-color-red);
 }
 
 .faq__item.is-open .faq__item-answer {
