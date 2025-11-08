@@ -586,7 +586,7 @@ li{
 .reason__item-text {
     font-size: 1.4rem;
     line-height: 1.5;
-    font-weight: 500;
+    font-weight: 700;
 }
 
 .reason__item-text span {
@@ -1280,10 +1280,11 @@ li{
     content: "";
     position: absolute;
     top: 1rem;
-    left: 0;
-    width: 100%;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 1.2rem;
     height: 7.7rem;
-    background: url(../img/deco/dot_vertical.png) no-repeat center / contain;
+    background: url(../img/deco/dot_vertical.png) no-repeat center / 100%;
     z-index: 1;
 }
 
@@ -1747,11 +1748,12 @@ li{
 }
 
 .closing__text .closing__text--strong {
-  background-image: radial-gradient(circle at center, var(--main-color) 20%, transparent 20%); /* 点の色とサイズ調整 */
-  background-position: top right;
-  background-repeat: repeat-x; 
-  background-size: 1em 0.3em;
-  padding-top: .4em;
+    padding-top: .4em;
+    padding-left: 0;
+    background-image: radial-gradient(circle at center, var(--main-color) 20%, transparent 20%); /* 点の色とサイズ調整 */
+    background-position: top right;
+    background-repeat: repeat-x; 
+    background-size: 1.03em 0.3em;
 }
 
 .closing__message {
