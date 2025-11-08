@@ -1739,20 +1739,42 @@ li{
     font-weight: 700;
 }
 
-.closing__text:last-child {
-    margin-bottom: 1.5rem;
-}
-
 .closing__text span {
+    padding-left: 0.3em;
+    font-size: 1.6rem;
     color: var(--main-color);
     background: linear-gradient(transparent 60%, var(--text-color-yellow) 60%);
 }
 
+.closing__text .closing__text--strong {
+  background-image: radial-gradient(circle at center, var(--main-color) 20%, transparent 20%); /* 点の色とサイズ調整 */
+  background-position: top right;
+  background-repeat: repeat-x; 
+  background-size: 1em 0.3em;
+  padding-top: .4em;
+}
+
 .closing__message {
-    font-size: 2.2rem;
+    margin-top: 3rem;
+    font-size: 1.6rem;
     line-height: 1.2;
     font-weight: 900;
+}
+
+.closing__message span {
+    font-size: 2.2rem;
+    line-height: 1.5;
     color: var(--main-color);
+    filter: drop-shadow(0 2px 1px rgba(0,0,0,.7)) ;
+    text-shadow: 
+        0 0 3px var(--text-color-white),
+        0 0 3px var(--text-color-white),
+        0 0 4.5px var(--text-color-white),
+        0 0 4.5px var(--text-color-white),
+        1.5px 1.5px 1.5px var(--text-color-white),
+        -1.5px 1.5px 1.5px var(--text-color-white),
+        1.5px -1.5px 1.5px var(--text-color-white),
+        -1.5px -1.5px 1.5px var(--text-color-white);
 }
 
 
